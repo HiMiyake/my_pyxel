@@ -25,8 +25,5 @@ class App:
 
     def draw_ship(self):
         pyxel.blt(self.ship_x, self.ship_y, 0, 32, 0, 8, 8, 0)
-from my_pyxel import main
 
-
-if __name__ == "__main__":
-    main()
+App()

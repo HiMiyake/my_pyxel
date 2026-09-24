@@ -13,7 +13,7 @@ uv sync
 ## 起動
 
 ```bash
-uv run my-pyxel
+uv run python3 main.py
 ```
 
 `Q` キーで終了できます。
