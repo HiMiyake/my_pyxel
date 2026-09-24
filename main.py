@@ -3,6 +3,9 @@ from pathlib import Path
 import pyxel
 
 GAME_TITLE = "Space Rescue"
+SHIP_SPEED = 2
+SCREEN_WIDTH = 160
+SHIP_WIDTH = 8
 
 
 class App:
@@ -17,6 +20,13 @@ class App:
     def update(self):
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
+
+        if pyxel.btn(pyxel.KEY_LEFT):
+            self.ship_x -= SHIP_SPEED
+        if pyxel.btn(pyxel.KEY_RIGHT):
+            self.ship_x += SHIP_SPEED
+
+        self.ship_x = max(0, min(self.ship_x, SCREEN_WIDTH - SHIP_WIDTH))
 
     def draw(self):
         pyxel.cls(0)
