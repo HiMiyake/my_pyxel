@@ -95,7 +95,7 @@ class App:
 
         if self.game_over:
             pyxel.text(48, 48, "GAME OVER", 8)
-            pyxel.text(32, 58, "Press R or A", 7)
+            pyxel.text(32, 58, "Press R or START", 7)
 
     def draw_ship(self):
         pyxel.blt(self.ship_x, self.ship_y, 0, 32, 0, 8, 8, 0)
