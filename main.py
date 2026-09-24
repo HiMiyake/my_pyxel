@@ -43,7 +43,8 @@ class App:
             pyxel.quit()
 
         if self.game_over:
-            if pyxel.btnp(pyxel.KEY_R):
+            if (pyxel.btnp(pyxel.KEY_R)
+                    or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_START)):
                 self.reset_game()
             return
 
@@ -94,7 +95,7 @@ class App:
 
         if self.game_over:
             pyxel.text(48, 48, "GAME OVER", 8)
-            pyxel.text(39, 58, "Press R to retry", 7)
+            pyxel.text(32, 58, "Press R or A", 7)
 
     def draw_ship(self):
         pyxel.blt(self.ship_x, self.ship_y, 0, 32, 0, 8, 8, 0)
